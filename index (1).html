@@ -1,0 +1,49 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Polynomial Interpolator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Polynomial Interpolator</h1>
+    <div class="input-group">
+      <label for="q">Prime number q:</label>
+      <input type="text" id="q">
+    </div>
+    <div class="input-group">
+      <label for="degree">Degree of polynomial (n):</label>
+      <input type="text" id="degree">
+    </div>
+    <div class="input-group">
+      <label >Enter x coordinates (seperated by commas):</label>
+      <input type="text" class="point" id ="xpoints">
+    </div>
+    <div class="input-group">
+        <label for = "ypoints">Enter f(x) i.e evaluations over field q (seperated by commas):</label>
+        <input type="text" class="point" id = "ypoints">
+    </div>
+
+    <button onclick="interpolatePolynomial()">Calculate</button>
+
+    <div id = "Exp" style="display: none;">
+        <h3>Polynomial : </h3>
+        <div id = "polynomialExp"></div>
+    </div>
+    <div id="myPlot"></div>
+    <div id="steps">
+      <h3>Steps:</h3>
+      <div id="stepsContent"></div>
+    </div>     
+    <div id="steps">
+      <h3>Algorithm:</h3>
+      <div id="step_s"></div>
+    </div>  
+  </div>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
